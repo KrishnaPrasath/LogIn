@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        padding: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        padding: 20px;
+      }
+      button:hover {
+        transform: scale(0.9, 0.9);
+        transition: 0.3s;
+      }
+      .buttonCard {
+        transition: 0.3s;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        font-family: "Russo One", sans-serif;
+      }
+
+      .divResize {
+        height: 80%;
+        width: 30%;
+        margin: 0 auto;
+        padding: 30px;
+
+        background-image: radial-gradient(
+          circle,
+          #051937,
+          #004d7a,
+          #008793,
+          #00bf72,
+          #a8eb12
+        );
+      }
+
+      .card {
+        /* Add shadows to create the "card" effect */
+
+        transition: 0.3s;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /* width: 40%; */
+      }
+
+      .parent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Arvo', serif; -->
+    <!-- <meta http-equiv="refresh" content="5" /> -->
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class=" divResize  card">
+      <div
+        style="background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12); "
+        class="card parent"
+        id="innerDiv"
+      >
+        <!-- <div>
+          <img src="images/login.png" alt="App pic" />
+        </div> -->
+        <input
+          class="buttonCard form-control"
+          type="text"
+          placeholder="UserName"
+          style="margin:20px"
+          id="UN"
+        />
+
+        <input
+          class="form-control buttonCard"
+          type="password"
+          placeholder="PassWord"
+          style="margin:20px"
+          id="PW"
+        />
+        <div>
+          <button
+            class="btn btn-lg btn-block buttonCard "
+            type="button"
+            name="action"
+            id="Submit"
+            onclick="validation()"
+          >
+            SUBMIT
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      //   setTimeout(() => (location.href += ""), 5000);
+      let validation = function() {
+        let userName = document.getElementById("UN").value;
+        let passWord = document.getElementById("PW").value;
+        if (userName == "krish" && passWord == "krish") {
+          alert("Login Success");
+        } else {
+          alert("Check LOGIN credentials");
+        }
+      };
+    </script>
+  </body>
+</html>
